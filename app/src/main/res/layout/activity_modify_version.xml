@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.ModifyVersion">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/modify_version_drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Activities.CreateVersion">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/modify_version_coordinator_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Spinner
+                android:id="@+id/modify_version_spinner"
+                android:layout_width="325dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+
+                app:layout_constraintBottom_toTopOf="@+id/modify_version_instruction1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/modify_version_appBarLayout" />
+
+            <TextView
+                android:id="@+id/modify_version_instruction1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/roboto_slab_thin"
+                android:text="Enter Version Name: "
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/modify_version_appBarLayout" />
+
+            <EditText
+                android:id="@+id/modify_version_response1"
+                android:layout_width="360dp"
+                android:layout_height="42dp"
+                android:fontFamily="@font/roboto_slab_thin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/modify_version_instruction1"
+                />
+
+            <TextView
+                android:id="@+id/modify_version_instruction2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/roboto_slab_thin"
+                android:text="Estimate Income: "
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/modify_version_response1" />
+
+            <EditText
+                android:id="@+id/modify_version_response2"
+                android:layout_width="360dp"
+                android:layout_height="42dp"
+                android:fontFamily="@font/roboto_slab_thin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/modify_version_instruction2" />
+
+            <TextView
+                android:id="@+id/modify_version_instruction3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/roboto_slab_thin"
+                android:text="Estimate Expenses: "
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/modify_version_response2" />
+
+            <EditText
+                android:id="@+id/modify_version_response3"
+                android:layout_width="360dp"
+                android:layout_height="42dp"
+                android:fontFamily="@font/roboto_slab_thin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/modify_version_instruction3" />
+
+            <TextView
+                android:id="@+id/modify_version_instruction4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/roboto_slab_thin"
+                android:text="Set Goals: Allocate Income"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@+id/modify_version_response3" />
+
+            <TextView
+                android:id="@+id/modify_version_instruction5"
+                android:layout_width="133dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/roboto_slab_thin"
+                android:text="Essentials "
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/modify_version_instruction4" />
+
+
+            <TextView
+                android:id="@+id/modify_version_instruction6"
+                android:layout_width="133dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/roboto_slab_thin"
+                android:text="Non-Essentials "
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/modify_version_instruction5" />
+
+            <TextView
+                android:id="@+id/modify_version_instruction7"
+                android:layout_width="133dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/roboto_slab_thin"
+                android:text="Savings "
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/modify_version_instruction6" />
+
+
+            <!--        Beginning of the Nav Bar-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/modify_version_appBarLayout"
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/modify_version_toolbar"
+                    android:layout_width="416dp"
+                    android:layout_height="90dp"
+                    android:background="#041E42"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/modify_version_textView"
+                    android:layout_width="298dp"
+                    android:layout_height="81dp"
+                    android:background="#041E42"
+                    android:fontFamily="@font/roboto_slab_thin"
+                    android:text="Modify Version"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="40sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.495"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.555" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--        END OF NAV BAR-->
+
+            <SeekBar
+                android:id="@+id/modify_version_seekBar_essentials"
+                android:layout_width="165dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toEndOf="@+id/modify_version_instruction5"
+                app:layout_constraintTop_toBottomOf="@+id/modify_version_instruction4" />
+
+            <TextView
+                android:id="@+id/modify_version_essentials_amt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/roboto_slab_thin"
+                android:text="$0"
+                app:layout_constraintStart_toEndOf="@+id/modify_version_seekBar_essentials"
+                app:layout_constraintTop_toBottomOf="@+id/modify_version_instruction4" />
+
+            <SeekBar
+                android:id="@+id/modify_version_seekBar_nonessentials"
+                android:layout_width="155dp"
+                android:layout_height="22dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toEndOf="@+id/modify_version_instruction6"
+                app:layout_constraintTop_toBottomOf="@+id/modify_version_instruction5" />
+
+            <TextView
+                android:id="@+id/modify_version_nonessentials_amt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/roboto_slab_thin"
+                android:text="$0"
+                app:layout_constraintStart_toEndOf="@+id/modify_version_seekBar_nonessentials"
+                app:layout_constraintTop_toBottomOf="@+id/modify_version_instruction5" />
+
+            <SeekBar
+                android:id="@+id/modify_version_seekBar_savings"
+                android:layout_width="139dp"
+                android:layout_height="19dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toEndOf="@+id/modify_version_instruction7"
+                app:layout_constraintTop_toBottomOf="@+id/modify_version_instruction6" />
+
+            <TextView
+                android:id="@+id/modify_version_savings_amt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/roboto_slab_thin"
+                android:text="$0"
+                app:layout_constraintStart_toEndOf="@+id/modify_version_seekBar_savings"
+                app:layout_constraintTop_toBottomOf="@+id/modify_version_instruction6" />
+
+            <TextView
+                android:id="@+id/modify_version_remaining"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="90dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/roboto_slab_thin"
+                android:text="Remaining: "
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/modify_version_instruction7" />
+
+            <TextView
+                android:id="@+id/modify_version_remaining_entry"
+                android:layout_width="49dp"
+                android:layout_height="23dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/roboto_slab_thin"
+                android:text="$0"
+                app:layout_constraintStart_toEndOf="@+id/modify_version_remaining"
+                app:layout_constraintTop_toBottomOf="@+id/modify_version_seekBar_savings" />
+
+            <Button
+                android:id="@+id/modify_version_save_changes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:fontFamily="@font/roboto_slab_thin"
+                android:text="@string/save_changes"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/modify_version_essential_percentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/roboto_slab_thin"
+                android:text="0"
+                app:layout_constraintEnd_toStartOf="@+id/modify_version_seekBar_essentials"
+                app:layout_constraintStart_toEndOf="@+id/modify_version_instruction5"
+                app:layout_constraintTop_toBottomOf="@+id/modify_version_instruction4" />
+
+            <TextView
+                android:id="@+id/modify_version_nonessential_percentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/roboto_slab_thin"
+                android:text="0"
+                app:layout_constraintEnd_toStartOf="@+id/modify_version_seekBar_nonessentials"
+                app:layout_constraintStart_toEndOf="@+id/modify_version_instruction6"
+                app:layout_constraintTop_toBottomOf="@+id/modify_version_instruction5" />
+
+            <TextView
+                android:id="@+id/modify_version_savings_percentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/roboto_slab_thin"
+                android:text="0"
+                app:layout_constraintEnd_toStartOf="@+id/modify_version_seekBar_savings"
+                app:layout_constraintStart_toEndOf="@+id/modify_version_instruction7"
+                app:layout_constraintTop_toBottomOf="@+id/modify_version_instruction6" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/modify_version_nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:menu="@menu/nav_menu"
+            app:headerLayout="@layout/nav_header_layout"/>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

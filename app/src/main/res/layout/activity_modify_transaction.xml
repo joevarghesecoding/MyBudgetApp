@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#11000000"
+    android:layout_height="fill_parent">
+    tools:context=".Activities.ModifyTransaction">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/modify_transaction_drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Activities.ModifyTransaction">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/modify_transaction_coordinator_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/modify_transaction_instruction_version"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/roboto_slab_thin"
+                android:text="Select Version"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/modify_transaction_appBarLayout" />
+
+
+            <Spinner
+                android:id="@+id/modify_transaction_version_spinner"
+                android:layout_width="325dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/modify_transaction_instruction_version" />
+
+            <TextView
+                android:id="@+id/modify_transaction_instruction_transaction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto_slab_thin"
+                android:text="Select Transaction"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/modify_transaction_version_spinner" />
+
+
+            <Spinner
+                android:id="@+id/modify_transaction_transaction_spinner"
+                android:layout_width="325dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/modify_transaction_instruction_transaction" />
+
+
+            <TextView
+                android:id="@+id/modify_transaction_instruction_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto_slab_thin"
+                android:text="Transaction Type"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/modify_transaction_transaction_spinner" />
+
+            <Spinner
+                android:id="@+id/modify_transaction_type_spinner"
+                android:layout_width="325dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/modify_transaction_instruction_type" />
+
+
+<!--            <TextView-->
+<!--                android:id="@+id/modify_transaction_instruction_name"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="3dp"-->
+<!--                android:fontFamily="@font/roboto_slab_thin"-->
+<!--                android:text="Transaction Name"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textSize="20sp"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/modify_transaction_type_spinner" />-->
+
+<!--            <EditText-->
+<!--                android:id="@+id/modify_transaction_name_entry"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="16dp"-->
+<!--                android:layout_marginTop="3dp"-->
+<!--                android:layout_marginEnd="16dp"-->
+<!--                android:fontFamily="@font/roboto_slab_thin"-->
+<!--                android:text="Input text for single line field"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textSize="15sp"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/modify_transaction_instruction_name" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/modify_transaction_instruction_description"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="3dp"-->
+<!--                android:fontFamily="@font/roboto_slab_thin"-->
+<!--                android:text="Transaction Description"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textSize="20sp"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintHorizontal_bias="0.0"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/modify_transaction_name_entry" />-->
+
+<!--            <EditText-->
+<!--                android:id="@+id/modify_transaction_description_entry"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="16dp"-->
+<!--                android:layout_marginTop="3dp"-->
+<!--                android:layout_marginEnd="16dp"-->
+<!--                android:fontFamily="@font/roboto_slab_thin"-->
+<!--                android:text="Input text for single line field"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textSize="15sp"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/modify_transaction_instruction_description" />-->
+
+
+<!--            <TextView-->
+<!--                android:id="@+id/modify_transaction_instruction_amount"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="3dp"-->
+<!--                android:fontFamily="@font/roboto_slab_thin"-->
+<!--                android:text="Transaction Amount"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textSize="20sp"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/modify_transaction_description_entry" />-->
+
+<!--            <EditText-->
+<!--                android:id="@+id/modify_transaction_amount_entry"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="16dp"-->
+<!--                android:layout_marginTop="3dp"-->
+<!--                android:layout_marginEnd="16dp"-->
+<!--                android:fontFamily="@font/roboto_slab_thin"-->
+<!--                android:text="Input text for single line field"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textSize="15sp"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/modify_transaction_instruction_amount" />-->
+
+            <Button
+                android:id="@+id/modify_transaction_save_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_slab_thin"
+                android:text="Delete Transaction"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/modify_transaction_transaction_spinner" />
+
+
+            <!--        Beginning of the Nav Bar-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/modify_transaction_appBarLayout"
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/modify_transaction_toolbar"
+                    android:layout_width="416dp"
+                    android:layout_height="90dp"
+                    android:background="#041E42"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/modify_transaction_textView"
+                android:layout_width="298dp"
+                android:layout_height="81dp"
+                android:background="#041E42"
+                android:fontFamily="@font/roboto_slab_thin"
+                android:text="Delete Transaction"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="33sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.495"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+            <!--        END OF NAV BAR-->
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/modify_transaction_nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:menu="@menu/nav_menu"
+            app:headerLayout="@layout/nav_header_layout"/>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

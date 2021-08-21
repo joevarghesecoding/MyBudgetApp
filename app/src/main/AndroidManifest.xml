@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.budgetapp">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BudgetApp">
+
+<!--        CREATE VERSION-->
+        <activity
+            android:name=".Activities.CreateVersion"
+            android:screenOrientation="portrait">
+
+<!--             <intent-filter>-->
+<!--             <action android:name="android.intent.action.MAIN" />-->
+
+
+<!--             <category android:name="android.intent.category.LAUNCHER" />-->
+<!--             </intent-filter>-->
+
+        </activity>
+
+<!--        MODIFY VERSION-->
+        <activity
+            android:name=".Activities.ModifyVersion"
+            android:label="@string/title_activity_modify_version"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.BudgetApp.NoActionBar">
+
+<!--             <intent-filter>-->
+<!--             <action android:name="android.intent.action.MAIN" />-->
+
+
+<!--             <category android:name="android.intent.category.LAUNCHER" />-->
+<!--             </intent-filter>-->
+        </activity>
+
+<!--        INTRODUCTION-->
+        <activity
+            android:name=".Activities.Introduction"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.BudgetApp.NoActionBar">
+
+<!--             <intent-filter>-->
+<!--             <action android:name="android.intent.action.MAIN" />-->
+
+
+<!--             <category android:name="android.intent.category.LAUNCHER" />-->
+<!--             </intent-filter>-->
+        </activity>
+
+<!--        VIEW VERSION-->
+        <activity
+            android:name=".Activities.ViewVersion"
+            android:screenOrientation="portrait">
+<!--                <intent-filter>-->
+<!--                    <action android:name="android.intent.action.MAIN" />-->
+
+<!--                    <category android:name="android.intent.category.LAUNCHER" />-->
+<!--                </intent-filter>-->
+        </activity>
+        <activity
+            android:name=".Activities.MainActivity"
+            android:screenOrientation="portrait">
+
+             <intent-filter>
+             <action android:name="android.intent.action.MAIN" />
+
+
+             <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
+        </activity>
+
+<!--        ADD TRANSACTION-->
+        <activity
+            android:name=".Activities.AddTransaction"
+            android:screenOrientation="portrait">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
+
+        <!--        MODIFY TRANSACTION-->
+        <activity
+            android:name=".Activities.ModifyTransaction"
+            android:screenOrientation="portrait">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
